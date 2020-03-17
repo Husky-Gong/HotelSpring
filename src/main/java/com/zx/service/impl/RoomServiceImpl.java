@@ -9,7 +9,9 @@ import com.zx.mapper.RoomMapper;
 import com.zx.query.RoomQuery;
 import com.zx.service.IRoomService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class RoomServiceImpl implements IRoomService {
     @Autowired
     private RoomMapper roomMapper;

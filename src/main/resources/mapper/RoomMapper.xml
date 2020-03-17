@@ -9,6 +9,13 @@
     <result column="price" jdbcType="INTEGER" property="price" />
     <result column="info" jdbcType="VARCHAR" property="info" />
     <result column="hotelId" jdbcType="INTEGER" property="hotelId" />
+
+    <result column="name" jdbcType="VARCHAR" property="hotelName" />
+
+    <result column="address" jdbcType="INTEGER" property="hotelAddress" />
+
+    <result column="mobile" jdbcType="INTEGER" property="hotelTel" />
+
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
@@ -95,7 +102,7 @@
   </update>
 
   <select id="selectList" resultMap="BaseResultMap">
-    select room.id, room.type,room.price,room.hotelId,hotel.name,hotel.address,hotel.mobile from room left join hotel on room.hotelId=hotel.id;
+    select room.id,room.type,room.price,room.hotelId,hotel.name,hotel.address,hotel.mobile from room left join hotel on room.hotelId=hotel.id
     <where>
       <if test="name != null and name !=''">
         and hotel.name like concat('%',#{name},'%')

@@ -11,6 +11,37 @@ public class Room {
 
     private Integer hotelId;
 
+    private String hotelName;
+
+    private String hotelAddress;
+
+    private String hotelTel;
+
+
+    public String getHotelTel() {
+        return hotelTel;
+    }
+
+    public void setHotelTel(String hotelTel) {
+        this.hotelTel = hotelTel;
+    }
+
+    public String getHotelAddress() {
+        return hotelAddress;
+    }
+
+    public void setHotelAddress(String hotelAddress) {
+        this.hotelAddress = hotelAddress;
+    }
+
+    public String getHotelName() {
+        return hotelName;
+    }
+
+    public void setHotelName(String hotelName) {
+        this.hotelName = hotelName;
+    }
+
     public Integer getId() {
         return id;
     }
